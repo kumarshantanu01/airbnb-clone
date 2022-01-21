@@ -6,34 +6,34 @@ function Footer() {
       <div className="space-y-4 text-xs text-gray-800">
         <h5 className="font-bold">ABOUT</h5>
         <p>How Airbnb works</p>
-        <p>Newsroom</p>
-        <p>Investors</p>
-        <p>Airbnb Plus</p>
-        <p>Airbnb Luxe</p>
+        <p>Help Centre</p>
+        <p>Safety information</p>
+        <p>Our COVID-19 Response</p>
+        <p>Report a neighbourhood concern</p>
       </div>
       <div className="space-y-4 text-xs text-gray-800">
         <h5 className="font-bold">COMMUNITY</h5>
-        <p>Accessibility</p>
-        <p>Not a real one</p>
-        <p>ust adding anything</p>
-        <p>Should generate random?</p>
-        <p>Leave it</p>
+        <p>Airbnb.org: disaster relief housing</p>
+        <p>Support Afghan refugees</p>
+        <p>Combating discriminationg</p>
+        <p>Celebrating diversity & belonging</p>
+        <p>Airbnb Premimum</p>
       </div>
       <div className="space-y-4 text-xs text-gray-800">
         <h5 className="font-bold">HOST</h5>
-        <p>How Airbnb works</p>
-        <p>Newsroom</p>
-        <p>Investors</p>
-        <p>Airbnb Plus</p>
-        <p>Airbnb Luxe</p>
+        <p>Try hosting</p>
+        <p>AirCover: protection for Hosts</p>
+        <p>Explore hosting resources</p>
+        <p>Visit our community forum</p>
+        <p>How to host responsibly</p>
       </div>
       <div className="space-y-4 text-xs text-gray-800">
         <h5 className="font-bold">JOIN US</h5>
-        <p>How Airbnb works</p>
         <p>Newsroom</p>
+        <p>Learn about new features</p>
+        <p>Letter from our founders</p>
+        <p>Careers</p>
         <p>Investors</p>
-        <p>Airbnb Plus</p>
-        <p>Airbnb Luxe</p>
       </div>
     </div>
   );
