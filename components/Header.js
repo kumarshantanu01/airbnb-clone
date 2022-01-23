@@ -12,7 +12,7 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/router";
 
-function Header() {
+function Header({placeholder}) {
   {
     /* INSERTING CALENDAR */
   }
@@ -75,7 +75,7 @@ function Header() {
           onChange={(e) => setsearchInput(e.target.value)}
           className="pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400  flex-grow"
           type="text"
-          placeholder="Start your search"
+          placeholder={placeholder || "Start your search"}
         />
         <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
       </div>
