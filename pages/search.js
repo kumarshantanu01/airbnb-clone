@@ -3,9 +3,11 @@ import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { format } from "date-fns";
+import InfoCard from "../components/InfoCard";
 
-function Search({placeholder}) {
+function Search({ searchResults }) {
   const router = useRouter();
+  // console.log(searchResults);
 
   //destructuring using ES6
   const { location, startDate, endDate, noOfGuests } = router.query;
@@ -35,6 +37,24 @@ function Search({placeholder}) {
             <p className="button">Rooms and Beds</p>
             <p className="button">More Filters</p>
           </div>
+
+          <div className="flex flex-col">
+
+          {searchResults.map(
+            ({ img, location, title, description, star, price, total }) => (
+              <InfoCard
+                key={img}
+                img={img}
+                location={location}
+                title={title}
+                description={description}
+                star={star}
+                price={price}
+                total={total}
+              />
+            )
+          )}
+          </div>
         </section>
       </main>
       <Footer />
@@ -43,3 +63,15 @@ function Search({placeholder}) {
 }
 
 export default Search;
+
+export async function getServerSideProps() {
+  const searchResults = await fetch("https://links.papareact.com/isz").then(
+    (res) => res.json()
+  );
+
+  return {
+    props: {
+      searchResults,
+    },
+  };
+}
