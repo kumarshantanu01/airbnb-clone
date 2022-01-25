@@ -12,7 +12,7 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/router";
 
-function Header({placeholder}) {
+function Header({ placeholder }) {
   {
     /* INSERTING CALENDAR */
   }
@@ -31,17 +31,17 @@ function Header({placeholder}) {
     setsearchInput("");
   };
 
-  const search = () =>{
+  const search = () => {
     router.push({
-      pathname: '/search',
-      query:{
+      pathname: "/search",
+      query: {
         location: searchInput,
         startDate: startDate.toISOString(),
         endDate: endDate.toISOString(),
         noOfGuests,
-      }
+      },
     });
-  }
+  };
 
   const selectionRange = {
     startDate: startDate,
@@ -87,7 +87,7 @@ function Header({placeholder}) {
         <p className="hidden md:inline cursor-pointer">Become a host</p>
         <GlobeAltIcon className="h-6 cursor-pointer" />
 
-        <div className="flex items-center space-x-2 border-2 p-2 rounded-full">
+        <div className="flex items-center space-x-2 border-2 p-2 rounded-full bg-white">
           <MenuIcon className="h-6" />
           <UserCircleIcon className="h-6" />
         </div>
@@ -121,7 +121,9 @@ function Header({placeholder}) {
             <button onClick={resetInput} className="flex-grow text-gray-500">
               Cancel
             </button>
-            <button onClick={search} className="flex-grow text-red-400">Serach</button>
+            <button onClick={search} className="flex-grow text-red-400">
+              Serach
+            </button>
           </div>
         </div>
       )}
