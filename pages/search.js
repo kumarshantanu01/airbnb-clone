@@ -27,7 +27,7 @@ function Search({ searchResults }) {
             200+ stays - {range} - for {noOfGuests} guests
           </p>
           <h1 className="text-3xl font-semibold mt-2 mb-6">
-            Styas in {location}
+            Stays in {location}
           </h1>
 
           <div className="hidden lg:inline-flex mb-5 space-x-3 text-gray-800 whitespace-nowrap">
@@ -40,25 +40,25 @@ function Search({ searchResults }) {
           </div>
 
           <div className="flex flex-col">
-
-          {searchResults.map(
-            ({ img, location, title, description, star, price, total }) => (
-              <InfoCard
-                key={img}
-                img={img}
-                location={location}
-                title={title}
-                description={description}
-                star={star}
-                price={price}
-                total={total}
-              />
-            )
-          )}
+            {searchResults.map(
+              ({ img, location, title, description, star, price, total }) => (
+                <InfoCard
+                  key={img}
+                  img={img}
+                  location={location}
+                  title={title}
+                  description={description}
+                  star={star}
+                  price={price}
+                  total={total}
+                />
+              )
+            )}
           </div>
         </section>
         <section className="hidden xl:inline-flex min-w-[600px]">
-          <Map/>
+          <Map searchResults={searchResults} /> 
+          {/* passing search results to maps for accessing longitude and latitude */}
         </section>
       </main>
       <Footer />
